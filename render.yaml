@@ -1,1 +1,10 @@
-
+services:
+  - type: web
+    name: afk-bot
+    env: node
+    plan: free
+    buildCommand: "npm install"
+    startCommand: "node index.js"
+    healthCheck:
+      path: /
+      initialDelaySeconds: 15
